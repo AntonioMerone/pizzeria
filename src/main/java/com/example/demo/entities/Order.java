@@ -32,4 +32,10 @@ public class Order {
         this.coperto = coperto;
     }
 
+    public double costoTotale() {
+        double prezzoTotale = listaDelMenu.stream()
+                .mapToDouble(elemento -> elemento.getPrice()).sum();
+        return prezzoTotale + (coperto * numeriCoperti);
+    }
+
 }

@@ -22,9 +22,14 @@ public class MyRunner implements CommandLineRunner {
 
 
         Tavolo tavolo1 = new Tavolo(1, 10, StatoTavolo.LIBERO);
-        Order order1 = new Order(1,1,10,StatoOrdine.PRONTO, costoCoperto);
+        Order order1 = new Order(1,1,10,StatoOrdine.PRONTO, 1.50);
 
         order1.getListaDelMenu().add(Sasicc);
         order1.getListaDelMenu().add(Tavernello);
+
+        System.out.println("numero ordine" + order1.getNumeriOrdine());
+        System.out.println("numero tavolo" + tavolo1.getNumero());
+        System.out.println("coperto" + costoCoperto);
+        System.out.println("conto" + order1.costoTotale());
     }
 }
